@@ -64,7 +64,7 @@ public class TodoEndpointTest {
     @Test
     @InSequence(1)
     @RunAsClient
-    public void testCreateTodo() throws Exception {
+    public void shouldCreateTodo() throws Exception {
         Todo todo = new Todo();
         todo.setTask("this is task");
         todo.setDescription("this is description");
