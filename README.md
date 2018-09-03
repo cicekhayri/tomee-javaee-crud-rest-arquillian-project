@@ -7,3 +7,6 @@ $ mvn clean test
 
 # Run the application
 $ mvn package tomee:run
+
+# Tutorial
+https://www.kodnito.com/posts/integration-tests-with-arquillian-using-tomee/
