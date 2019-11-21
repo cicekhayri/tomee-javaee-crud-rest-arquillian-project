@@ -10,9 +10,10 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import org.arquillian.container.chameleon.api.ChameleonTarget;
+import org.arquillian.container.chameleon.runner.ArquillianChameleon;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.RunAsClient;
-import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.junit.InSequence;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -30,7 +31,8 @@ import org.junit.runner.RunWith;
  *
  * @author hayricicek
  */
-@RunWith(Arquillian.class)
+@RunWith(ArquillianChameleon.class)
+@ChameleonTarget("tomee:7.0.5:remote") 
 public class TodoEndpointTest {
 
     @ArquillianResource
